@@ -1,8 +1,9 @@
 # Netlify: leave "Base directory" empty and set "Package directory" to apps/web
 # in the site's build settings, so npm installs the whole workspace from the repo root.
+# Paths here are relative to the BASE directory (the repo root), not to apps/web.
 [build]
   command = "npm run build -w @afro-party/game-core && npm run build -w @afro-party/web"
-  publish = "apps/web/.next""
+  publish = "apps/web/.next"
 
 [build.environment]
   NODE_VERSION = "22"
