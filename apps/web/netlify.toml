@@ -2,7 +2,7 @@
 # in the site's build settings, so npm installs the whole workspace from the repo root.
 [build]
   command = "npm run build -w @afro-party/game-core && npm run build -w @afro-party/web"
-  publish = ".next"
+  publish = "apps/web/.next""
 
 [build.environment]
   NODE_VERSION = "22"
