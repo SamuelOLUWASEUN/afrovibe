@@ -1,0 +1,21 @@
+{
+  "name": "afro-party",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "dev:server": "npm run dev -w @afro-party/room-server",
+    "dev:web": "npm run dev -w @afro-party/web",
+    "build": "npm run build -w @afro-party/game-core && npm run build -w @afro-party/room-server && npm run build -w @afro-party/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "check:filenames": "node scripts/check-filenames.mjs",
+    "smoke": "node scripts/smoke-game.mjs"
+  }
+}

@@ -1,0 +1,9 @@
+# Netlify: leave "Base directory" empty and set "Package directory" to apps/web
+# in the site's build settings, so npm installs the whole workspace from the repo root.
+[build]
+  command = "npm run build -w @afro-party/game-core && npm run build -w @afro-party/web"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
